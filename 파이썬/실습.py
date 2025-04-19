@@ -1,13 +1,9 @@
-씨발아 = {}
-씨발아['이름'] = '문상현'
-씨발아['나이'] = 25
-씨발아['성별'] = '남자'
+a = int(input("입력> "))
+for i  in range(a):
+    for j in range(i+1):
+        print("*", end="")
+    print()
 
-씨발아.clear()
-
-print(씨발아)
-print(씨발아.keys())
-print(씨발아.values())
-print(씨발아.items())
-
-print(not 'sidsk' in 씨발아)
+니엄마 = {'사과': 1, '배': 2, '귤': 3}
+for a, b in 니엄마.items():
+    print("{} {}".format(a, b))

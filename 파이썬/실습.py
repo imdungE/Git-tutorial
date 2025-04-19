@@ -1,9 +1,14 @@
-a = int(input("입력> "))
-for i  in range(a):
-    for j in range(i+1):
-        print("*", end="")
-    print()
+def ㅆ씨발(*니엄마) :
+    result = 0
+    for num in 니엄마:
+        result += num
+    return result
+hap = 0
 
-니엄마 = {'사과': 1, '배': 2, '귤': 3}
-for a, b in 니엄마.items():
-    print("{} {}".format(a, b))
+hap = ㅆ씨발(1,2,3,4,5)
+print(hap)
+
+def ㅆ씨발2(**니엄마) :
+    for k in 니엄마.keys():
+        print(k, ":", 니엄마[k])
+ㅆ씨발2(이름="김철수", 나이=20, 성별="남자")

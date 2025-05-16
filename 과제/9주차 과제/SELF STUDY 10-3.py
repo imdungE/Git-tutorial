@@ -11,6 +11,8 @@ def clickNext() :
     if num > 8 :
         num = 0
     photo = PhotoImage(file = "C:\\Users\\titic\\OneDrive\\바탕 화면\\파이썬\\" + fnameList[num])
+    label1 = Label(text = fnameList[num])
+    label1.place(x = 325, y = 10)
     pLabel.configure(image = photo)
     pLabel.image = photo
 
@@ -20,20 +22,23 @@ def clickPrev() :
     if num < 0 :
         num = 8
     photo = PhotoImage(file = "C:\\Users\\titic\\OneDrive\\바탕 화면\\파이썬\\" + fnameList[num])
+    label1 = Label(text = fnameList[num])
+    label1.place(x = 325, y = 10)
     pLabel.configure(image = photo)
     pLabel.image = photo
 
 window = Tk()
 window.geometry("700x500")
 window.title("사진 앨범 보기")
-label1 = Label(text = fnameList[num])
 
 btnPrev = Button(window, text = "<< 이전", command = clickPrev)
 btnNext = Button(window, text = "다음 >>", command = clickNext)
 
 photo = PhotoImage(file = "C:\\Users\\titic\\OneDrive\\바탕 화면\\파이썬\\" + fnameList[num])
 pLabel = Label(window, image = photo)
+label1 = Label(text = fnameList[num])
 
+label1.place(x = 340, y = 10)
 btnPrev.place(x = 250, y = 10)
 btnNext.place(x = 400, y =10)
 pLabel.place(x = 15, y = 50)

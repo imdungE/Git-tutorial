@@ -7,7 +7,7 @@ def clickMouse(event) :
     elif event.num == 2 :
         txt += "마우스 오른쪽 버튼이 ("
         
-    txt += str(event.y) + ", " + str(event.x) + ")에서 클릭됨"
+    txt += str(event.x) + ", " + str(event.y) + ")에서 클릭됨"
     label1.config(text = txt)
     
 window = Tk()
